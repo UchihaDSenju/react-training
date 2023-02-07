@@ -1,0 +1,6 @@
+package.json contains the dependencies
+node modules is the folder where all the dependencies are installed, it is created when we run the create-react-app command
+How React runs:
+index.html<div id="root">(in public)<-index.js<App />(in src)<-App.js(here we write what must be seen in div tag)
+
+Use PascalCase for naming fo .js files

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Hello from './components/Hello'
+import { Hellos } from './components/Hello2';//named export
+import Hello3 from './components/Hello3'
+import NoJsx from './components/noJSX';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Hello />{/*functional component*/}
+     <Hellos />{/* named exports cannot be used with a different name but with the function name only */}
+
+    {/*Class Component*/}
+    <Hello3 />
+    <NoJsx />
     </div>
   );
 }
 
 export default App;
+
+// use functional component as much as possible
+// because it has the absense of 'this' keyword which is difficult to undestand
+// They are called stateless components
+//Class Componets are 
