@@ -4,6 +4,8 @@ import Hello from './components/Hello'
 import { Hellos } from './components/Hello2';//named export
 import Hello3 from './components/Hello3'
 import NoJsx from './components/noJSX';
+import Heading from './components/Heading';
+import Props from './components/Props';
 
 function App() {
   return (
@@ -14,6 +16,13 @@ function App() {
     {/*Class Component*/}
     <Hello3 />
     <NoJsx />
+
+    <Heading title="PROPS"/>
+
+    <Props name="Tariq">
+      <p>This is a child element that can be rendered using the props</p>
+    </Props>
+    
     </div>
   );
 }
