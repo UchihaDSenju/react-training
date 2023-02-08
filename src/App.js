@@ -6,6 +6,7 @@ import Hello3 from './components/Hello3'
 import NoJsx from './components/noJSX';
 import Heading from './components/Heading';
 import Props from './components/Props';
+import State from './components/States';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <p>This is a child element that can be rendered using the props</p>
     </Props>
     
+    <State />
     </div>
   );
 }
