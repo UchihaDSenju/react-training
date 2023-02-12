@@ -7,6 +7,7 @@ import NoJsx from './components/noJSX';
 import Heading from './components/Heading';
 import Props from './components/Props';
 import State from './components/States';
+import ButtonClick from './components/EventHandler';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
     </Props>
     
     <State />
+
+    <ButtonClick />
     </div>
   );
 }
