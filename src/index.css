@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Doing the below removes unnecessary scroll */
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+    border: 5px solid red;
+}

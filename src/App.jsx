@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Home from "./components/Home";
 import ContentPage from "./components/ContentPage";
@@ -11,9 +11,16 @@ function App() {
   // A list of RouteObject entries are given
   const router = createBrowserRouter([
     {
+      path: '*',
+      element: <ErrorPage />
+    },
+    {
+      path: '/home',
+      element: <Navigate to='/' replace={true}/> // this redirects to original path and removes the `/home` entry from the history stack such that you cannot go back to it
+    },
+    {
       path: '/',
       element: <Home />,
-      errorElement: <ErrorPage />
     },
     {
       path: '/content',
@@ -22,6 +29,10 @@ function App() {
         // Having index as true means that this element will be first rendered when <ContentPage /> is rendered at index path ('/content')
         {
           index: true,
+          element: <Navigate to="index_content" replace={true} />
+        },
+        {
+          path: 'index_content',
           element: <Content />
         },
         {
